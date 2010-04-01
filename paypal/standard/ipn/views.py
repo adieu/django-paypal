@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse
 from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 from paypal.standard.ipn.forms import PayPalIPNForm
 from paypal.standard.ipn.models import PayPalIPN
  
  
+@csrf_exempt
 @require_POST
 def ipn(request, item_check_callable=None):
     """

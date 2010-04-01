@@ -5,7 +5,7 @@ from paypal.standard.ipn.models import PayPalIPN
 
 
 class PayPalIPNAdmin(admin.ModelAdmin):
-    date_hierarchy = 'payment_date'
+    # date_hierarchy = 'payment_date'
     fieldsets = (
         (None, {
             "fields": [
